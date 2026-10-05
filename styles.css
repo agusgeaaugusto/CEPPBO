@@ -325,3 +325,18 @@ body{overflow-x:hidden}.scroll-progress{position:fixed;z-index:3000;left:0;top:0
 @media(prefers-reduced-motion:reduce){
   .loader-mark img,.loader-mark:before,.loader-mark:after,.page-loader p,.page-loader small{animation:none!important}
 }
+
+/* Entrada institucional sin circulo */
+.page-loader .loader-mark{display:none!important}
+.loader-brand{position:relative;z-index:2;display:flex;align-items:center;gap:32px;padding:28px 36px;border-left:3px solid #d92f24;animation:ceppboEntrance .7s ease both}
+.loader-brand>img{width:125px;height:150px;object-fit:contain;filter:drop-shadow(0 18px 24px rgba(0,0,0,.3))}
+.loader-copy{text-align:left}
+.page-loader .loader-copy p{margin:0 0 8px!important;font:800 38px/1 Manrope,sans-serif!important;letter-spacing:.2em!important;text-indent:0!important;animation:none!important}
+.loader-copy>span{display:block;color:rgba(255,255,255,.7);font-size:11px;font-weight:800;letter-spacing:.15em;text-transform:uppercase}
+.loader-copy>strong{display:block;margin-top:5px;color:#fff;font:800 22px/1.15 Manrope,sans-serif}
+.page-loader .loader-copy small{display:block;margin-top:18px!important;color:#ffaaa3!important;font-size:10px!important;font-weight:800!important;letter-spacing:.18em!important;text-indent:0!important;animation:none!important}
+.loader-progress{position:relative;z-index:2;width:310px;height:2px;margin-top:26px;overflow:hidden;background:rgba(255,255,255,.13)}
+.loader-progress i{display:block;width:100%;height:100%;background:#fff;transform-origin:left;animation:ceppboProgress 1s ease both}
+@keyframes ceppboEntrance{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
+@keyframes ceppboProgress{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@media(max-width:600px){.loader-brand{gap:18px;padding:20px}.loader-brand>img{width:88px;height:110px}.page-loader .loader-copy p{font-size:27px!important}.loader-copy>strong{font-size:17px}.loader-progress{width:72vw}}
