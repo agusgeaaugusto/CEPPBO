@@ -67,10 +67,28 @@
     if(urls.length) probe.src=urls[pos++];
   }
 
+  function applyHeroBackground(items){
+    if(!Array.isArray(items)||!items.length) return;
+    const hero=document.querySelector(".hero");
+    if(!hero) return;
+    const probe=new Image();
+    let pos=0, urls=candidates(items[0]);
+    probe.onload=()=>{
+      const good=probe.src;
+      hero.style.backgroundImage=`linear-gradient(90deg,rgba(35,20,105,.88),rgba(57,37,143,.68)),url("${good}")`;
+      hero.style.backgroundSize="cover";
+      hero.style.backgroundPosition="center";
+      hero.style.backgroundRepeat="no-repeat";
+    };
+    probe.onerror=()=>{if(pos<urls.length) probe.src=urls[pos++];};
+    if(urls.length) probe.src=urls[pos++];
+  }
+
   function paint(payload){
     const source=payload?.sections||payload?.data||payload||{};
     sections.forEach(s=>render(s,source[s]||[]));
     applyLogo(source.logos||[]);
+    applyHeroBackground(source.fondo_portada||[]);
   }
 
   function readCache(){
