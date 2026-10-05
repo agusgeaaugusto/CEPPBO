@@ -139,3 +139,87 @@ body{overflow-x:hidden}.scroll-progress{position:fixed;z-index:3000;left:0;top:0
   .floating-whatsapp i{font-size:32px}
   .floating-instagram{right:20px;bottom:68px}
 }
+
+
+/* Portada CEPPBO 2026: composición institucional premium, sin círculo detrás del escudo */
+.hero-logo{
+  position:relative;
+  min-height:470px;
+  display:flex;
+  flex-direction:column;
+  align-items:flex-start;
+  justify-content:center;
+  padding:48px 42px 42px;
+  text-align:left;
+  isolation:isolate;
+}
+.hero-logo:before{
+  content:"";
+  position:absolute;
+  inset:18px 0 18px 22px;
+  z-index:-2;
+  border:1px solid rgba(255,255,255,.18);
+  border-radius:36px;
+  background:linear-gradient(145deg,rgba(255,255,255,.14),rgba(255,255,255,.045));
+  box-shadow:0 28px 80px rgba(9,5,35,.28);
+  backdrop-filter:blur(14px);
+  -webkit-backdrop-filter:blur(14px);
+}
+.hero-logo:after{
+  content:"CEPPBO";
+  position:absolute;
+  right:-10px;
+  bottom:48px;
+  z-index:-1;
+  color:rgba(255,255,255,.055);
+  font:800 clamp(64px,8vw,118px)/.8 Manrope,sans-serif;
+  letter-spacing:-.07em;
+  transform:rotate(-90deg) translateX(25%);
+  transform-origin:right bottom;
+  pointer-events:none;
+}
+.logo-halo{
+  position:absolute;
+  width:170px;
+  height:6px;
+  left:55px;
+  bottom:105px;
+  top:auto;
+  border:0;
+  border-radius:999px;
+  background:linear-gradient(90deg,var(--red),rgba(217,47,36,0));
+  filter:none;
+}
+.hero-logo img{
+  position:relative;
+  width:min(285px,78%);
+  max-height:330px;
+  margin-left:8px;
+  object-fit:contain;
+  filter:drop-shadow(0 24px 34px rgba(0,0,0,.32));
+  transition:transform .45s ease,filter .45s ease;
+}
+.hero-logo:hover img{
+  transform:translateY(-7px) scale(1.025);
+  filter:drop-shadow(0 30px 42px rgba(0,0,0,.38));
+}
+.hero-logo p{
+  position:relative;
+  margin:28px 0 5px 8px;
+  color:rgba(255,255,255,.66);
+  font-size:11px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:.16em;
+}
+.hero-logo strong{
+  position:relative;
+  margin-left:8px;
+  max-width:320px;
+  color:#fff;
+  font:800 27px/1.08 Manrope,sans-serif;
+  letter-spacing:-.035em;
+}
+@media(max-width:900px){
+  .hero-logo{display:none}
+}
