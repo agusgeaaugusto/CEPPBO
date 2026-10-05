@@ -44,7 +44,6 @@
           <img data-drive-index="${index}" loading="${index<2?"eager":"lazy"}" ${index===0?'fetchpriority="high"':""} decoding="async" alt="${esc(item.name||pretty(section))}">
         </div>
         <div class="drive-caption">
-          <strong>${esc((item.name||pretty(section)).replace(/\.[^.]+$/,""))}</strong>
           ${item.modifiedTime?`<small>Actualizado: ${new Date(item.modifiedTime).toLocaleDateString("es-PY")}</small>`:""}
         </div>
       </article>`).join("");
