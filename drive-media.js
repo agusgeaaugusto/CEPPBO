@@ -3,15 +3,27 @@
   const CACHE_KEY = "ceppbo-drive-media-v2";
   const pretty = s => ({avisos:"Avisos",posters:"Pósteres",actividades:"Actividades",eventos:"Eventos",horarios:"Horarios",grados_cursos:"Grados y cursos",docentes:"Docentes"}[s]||s);
   const escapeHtml = s => String(s||"").replace(/[&<>'"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[c]));
-  const imageUrl = item => item.imageUrl || item.thumbnailUrl || (item.id ? `https://drive.google.com/thumbnail?id=${encodeURIComponent(item.id)}&sz=w1200` : "");
+  // Google Drive thumbnail puede fallar en sitios externos aunque Apps Script liste el archivo.
+  // drive.usercontent.google.com sirve el archivo público directamente.
+  const directUrl = item => item?.id ? `https://drive.usercontent.google.com/download?id=${encodeURIComponent(item.id)}&export=view` : "";
+  const thumbUrl = item => item?.id ? `https://drive.google.com/thumbnail?id=${encodeURIComponent(item.id)}&sz=w1200` : (item?.imageUrl || item?.thumbnailUrl || "");
+  const imageUrl = item => directUrl(item) || thumbUrl(item);
+
+  function installFallback(img,item){
+    const fallback=thumbUrl(item);
+    img.addEventListener("error",()=>{
+      if(fallback && img.src!==fallback) img.src=fallback;
+    },{once:true});
+  }
 
   function render(section, items){
     const box=document.getElementById(`drive-${section}`); if(!box) return;
     if(!items?.length){box.innerHTML="";return;}
     box.innerHTML=items.map((item,index)=>{
       const eager=index===0;
-      return `<article class="drive-card reveal"><div class="drive-image"><img loading="${eager?'eager':'lazy'}" ${eager?'fetchpriority="high"':''} decoding="async" src="${imageUrl(item)}" alt="${escapeHtml(item.name||pretty(section))}"></div><div class="drive-caption"><strong>${escapeHtml((item.name||pretty(section)).replace(/\.[^.]+$/, ""))}</strong>${item.modifiedTime?`<small>Actualizado: ${new Date(item.modifiedTime).toLocaleDateString('es-PY')}</small>`:""}</div></article>`;
+      return `<article class="drive-card reveal"><div class="drive-image"><img data-drive-index="${index}" loading="${eager?'eager':'lazy'}" ${eager?'fetchpriority="high"':''} decoding="async" referrerpolicy="no-referrer" src="${imageUrl(item)}" alt="${escapeHtml(item.name||pretty(section))}"></div><div class="drive-caption"><strong>${escapeHtml((item.name||pretty(section)).replace(/\.[^.]+$/, ""))}</strong>${item.modifiedTime?`<small>Actualizado: ${new Date(item.modifiedTime).toLocaleDateString('es-PY')}</small>`:""}</div></article>`;
     }).join("");
+    box.querySelectorAll("img[data-drive-index]").forEach(img=>installFallback(img,items[Number(img.dataset.driveIndex)]));
   }
 
   function applyLogo(items){
