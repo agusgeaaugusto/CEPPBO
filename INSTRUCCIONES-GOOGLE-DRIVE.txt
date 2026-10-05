@@ -1,0 +1,40 @@
+CEPPBO - ACTUALIZACIÓN AUTOMÁTICA DESDE GOOGLE DRIVE
+
+ESTRUCTURA DE CARPETAS
+Creá una carpeta principal, por ejemplo: CEPPBO - Página Web
+Dentro creá EXACTAMENTE:
+
+01 - Avisos
+02 - Posters
+03 - Logos
+04 - Actividades
+05 - Eventos
+06 - Horarios
+07 - Grados y Cursos
+08 - Docentes
+
+QUÉ HACE CADA CARPETA
+- Avisos: comunicados en imagen.
+- Posters: afiches institucionales.
+- Logos: el logo más recientemente modificado reemplaza automáticamente todos los logos de la web. Usá PNG de alta calidad, preferentemente fondo interior blanco y exterior transparente.
+- Actividades: fotos/posters de actividades.
+- Eventos: invitaciones y eventos.
+- Horarios: horarios en imagen, sin recorte.
+- Grados y Cursos: información de grados/cursos.
+- Docentes: fotografías o fichas de docentes.
+
+CONFIGURACIÓN
+1. Abrí google-apps-script.gs.
+2. Copiá el ID de la carpeta principal de Drive y reemplazá PEGAR_AQUI_ID_CARPETA_PRINCIPAL.
+3. En script.google.com creá un proyecto y pegá el contenido del archivo.
+4. Implementar > Nueva implementación > Aplicación web.
+5. Ejecutar como: vos. Acceso: Cualquier persona.
+6. Copiá la URL que termina en /exec.
+7. Abrí media-config.js y pegala en window.CEPPBO_MEDIA_API = "...".
+8. Subí la web a GitHub Pages/hosting.
+
+ACTUALIZACIÓN
+La web consulta Drive cada 60 segundos y también al volver a la pestaña. No hace falta modificar HTML cada vez que subís una imagen.
+
+IMPORTANTE
+No cambies los nombres de las carpetas sin cambiar también FOLDERS en google-apps-script.gs.

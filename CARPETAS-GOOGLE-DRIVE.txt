@@ -1,0 +1,17 @@
+CEPPBO - GOOGLE DRIVE CONECTADO
+
+Carpeta principal:
+ID: 1YNht6JgzPFKGvls-ZpX2fqQb0fYFXqgh
+
+Carpetas creadas:
+01_AVISOS = 1_cUn6F6-m09XHsi1lmN4ObiIt4QcaoN3
+02_POSTERS = 1iN4uW8Vy_Nb_myPV5BzGKrCnApWjk5ZD
+03_LOGOS = 1yFE8E03UepbGlzC_2ds_UL-r58NRtMZj
+04_ACTIVIDADES = 1WXeScjLYB_iP9OytaG0_jRqWzkVxiHHd
+05_EVENTOS = 1bZhVdZLEHlrYTcy9c5UvKwqxmqWon-XS
+06_HORARIOS = 1abGKLLaqYNbneCCngHS9U_7GujHjNopJ
+07_GRADOS_Y_CURSOS = 1_dEiDHhghbCtrYsANpKVZiS76Eh7TNU0
+08_DOCENTES = 1yG1FBTJ-Rui2fKIk_pcrPJtk9u7QruDd
+
+PENDIENTE SOLO UNA VEZ:
+Publicar google-apps-script.gs como Aplicación web y pegar su URL /exec en media-config.js.
