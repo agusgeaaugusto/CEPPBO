@@ -426,3 +426,50 @@ img{max-width:100%;height:auto}
   .floating-instagram span{display:none!important}
   .floating-instagram i{font-size:30px!important}
 }
+
+/* Pantalla inicial: composición completamente centrada */
+.page-loader{
+  display:flex!important;
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  text-align:center!important;
+}
+.loader-brand{
+  flex-direction:column!important;
+  align-items:center!important;
+  justify-content:center!important;
+  gap:14px!important;
+  padding:28px 34px!important;
+  border-left:0!important;
+  text-align:center!important;
+}
+.loader-brand>img{
+  width:140px!important;
+  height:165px!important;
+  margin:0 auto!important;
+}
+.loader-copy{
+  width:100%!important;
+  text-align:center!important;
+}
+.page-loader .loader-copy p,
+.loader-copy>span,
+.loader-copy>strong,
+.page-loader .loader-copy small{
+  text-align:center!important;
+  margin-left:auto!important;
+  margin-right:auto!important;
+}
+.page-loader .loader-copy p{margin-top:5px!important;margin-bottom:10px!important}
+.loader-copy>strong{margin-top:6px!important}
+.page-loader .loader-copy small{margin-top:15px!important}
+.loader-progress{
+  margin:22px auto 0!important;
+  width:260px!important;
+}
+@media(max-width:600px){
+  .loader-brand{gap:10px!important;padding:20px!important}
+  .loader-brand>img{width:112px!important;height:132px!important}
+  .loader-progress{width:min(230px,65vw)!important}
+}
