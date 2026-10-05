@@ -9,17 +9,15 @@
     if(!item?.id) return [item?.imageUrl,item?.thumbnailUrl].filter(Boolean);
     const id=encodeURIComponent(item.id);
     return [
-      item.imageUrl,
-      item.thumbnailUrl,
       `https://drive.google.com/thumbnail?id=${id}&sz=w1600`,
       `https://lh3.googleusercontent.com/d/${id}=w1600`,
-      `https://drive.google.com/uc?export=view&id=${id}`,
-      `https://drive.usercontent.google.com/download?id=${id}&export=view`
+      item.imageUrl,
+      item.thumbnailUrl
     ].filter((v,i,a)=>v&&a.indexOf(v)===i);
   }
 
   function setImageWithFallback(img,item,finalFallback=""){
-    const urls=candidates(item);
+    const urls=candidates(item).filter(u=>!String(u).includes("drive.google.com/uc?"));
     let pos=0;
     const next=()=>{
       if(pos>=urls.length){
