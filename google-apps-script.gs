@@ -24,7 +24,8 @@ const FOLDERS = {
   eventos: '05_EVENTOS',
   horarios: '06_HORARIOS',
   grados_cursos: '07_GRADOS_Y_CURSOS',
-  docentes: '08_DOCENTES'
+  docentes: '08_DOCENTES',
+  fondo_portada: '09_FONDO_PORTADA'
 };
 
 function doGet() {
