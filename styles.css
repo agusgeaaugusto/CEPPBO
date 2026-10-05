@@ -340,3 +340,50 @@ body{overflow-x:hidden}.scroll-progress{position:fixed;z-index:3000;left:0;top:0
 @keyframes ceppboEntrance{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:none}}
 @keyframes ceppboProgress{from{transform:scaleX(0)}to{transform:scaleX(1)}}
 @media(max-width:600px){.loader-brand{gap:18px;padding:20px}.loader-brand>img{width:88px;height:110px}.page-loader .loader-copy p{font-size:27px!important}.loader-copy>strong{font-size:17px}.loader-progress{width:72vw}}
+
+/* Ajuste solicitado: SOLO contenedor del logo y su descripcion */
+.hero-logo{
+  align-items:center!important;
+  justify-content:center!important;
+  text-align:center!important;
+  padding:34px 28px!important;
+  min-height:440px!important;
+}
+.hero-logo:before{
+  inset:28px 18px!important;
+  border:1px solid rgba(255,255,255,.12)!important;
+  border-radius:32px!important;
+  background:rgba(255,255,255,.035)!important;
+  box-shadow:0 20px 55px rgba(10,5,40,.12)!important;
+  backdrop-filter:blur(7px)!important;
+  -webkit-backdrop-filter:blur(7px)!important;
+}
+.hero-logo:after{display:none!important}
+.hero-logo .logo-halo{
+  display:block!important;
+  left:50%!important;top:50%!important;bottom:auto!important;
+  width:260px!important;height:260px!important;
+  transform:translate(-50%,-68%)!important;
+  border:0!important;border-radius:50%!important;
+  background:radial-gradient(circle,rgba(255,255,255,.12) 0%,rgba(255,255,255,.035) 48%,transparent 72%)!important;
+  animation:ceppboLogoPulse 2.8s ease-in-out infinite!important;
+}
+.hero-logo img{
+  margin:0!important;
+  width:min(300px,82%)!important;
+  max-height:335px!important;
+  z-index:2!important;
+  animation:ceppboLogoFloat 3.4s ease-in-out infinite!important;
+}
+.hero-logo p{
+  margin:24px 0 5px!important;
+  text-align:center!important;
+  color:rgba(255,255,255,.72)!important;
+}
+.hero-logo strong{
+  margin:0!important;
+  text-align:center!important;
+  font-size:27px!important;
+}
+@keyframes ceppboLogoFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
+@keyframes ceppboLogoPulse{0%,100%{opacity:.5;transform:translate(-50%,-68%) scale(.94)}50%{opacity:1;transform:translate(-50%,-68%) scale(1.08)}}
