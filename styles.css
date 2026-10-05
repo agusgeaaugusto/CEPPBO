@@ -112,3 +112,30 @@ body{overflow-x:hidden}.scroll-progress{position:fixed;z-index:3000;left:0;top:0
   transform-origin:center;
   pointer-events:none;
 }
+
+
+/* WhatsApp CEPPBO: contacto principal, más destacado que Instagram */
+.floating-whatsapp{
+  position:fixed;z-index:902;right:24px;bottom:138px;
+  display:flex;align-items:center;justify-content:center;gap:10px;
+  min-height:58px;padding:0 20px;border-radius:999px;
+  background:#25D366;color:#fff;text-decoration:none;
+  font-weight:800;font-size:15px;letter-spacing:.1px;
+  box-shadow:0 12px 32px rgba(37,211,102,.38),0 0 0 0 rgba(37,211,102,.35);
+  transition:transform .25s ease,box-shadow .25s ease;
+  animation:whatsappPulse 2.4s infinite;
+}
+.floating-whatsapp i{font-size:30px}
+.floating-whatsapp:hover{transform:translateY(-4px) scale(1.04);box-shadow:0 16px 38px rgba(37,211,102,.48)}
+@keyframes whatsappPulse{
+  0%,100%{box-shadow:0 12px 32px rgba(37,211,102,.38),0 0 0 0 rgba(37,211,102,.30)}
+  50%{box-shadow:0 12px 32px rgba(37,211,102,.38),0 0 0 10px rgba(37,211,102,0)}
+}
+/* Instagram queda secundario */
+.floating-instagram{bottom:76px;opacity:.88;transform:scale(.92);transform-origin:right center}
+@media(max-width:600px){
+  .floating-whatsapp{right:16px;bottom:126px;width:60px;height:60px;min-height:60px;padding:0;border-radius:50%}
+  .floating-whatsapp span{display:none}
+  .floating-whatsapp i{font-size:32px}
+  .floating-instagram{right:20px;bottom:68px}
+}
