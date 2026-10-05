@@ -223,3 +223,105 @@ body{overflow-x:hidden}.scroll-progress{position:fixed;z-index:3000;left:0;top:0
 @media(max-width:900px){
   .hero-logo{display:none}
 }
+
+
+/* Loader CEPPBO: apertura institucional moderna */
+.page-loader{
+  background:
+    radial-gradient(circle at 50% 42%,rgba(105,75,190,.22),transparent 24%),
+    linear-gradient(145deg,#120a38 0%,#21145d 52%,#2f1b72 100%);
+}
+.page-loader:before{
+  content:"";
+  position:absolute;
+  inset:0;
+  pointer-events:none;
+  opacity:.24;
+  background-image:linear-gradient(rgba(255,255,255,.035) 1px,transparent 1px),linear-gradient(90deg,rgba(255,255,255,.035) 1px,transparent 1px);
+  background-size:48px 48px;
+  mask-image:radial-gradient(circle at center,#000,transparent 72%);
+}
+.loader-mark{
+  width:180px;
+  height:190px;
+  display:grid;
+  place-items:center;
+  position:relative;
+}
+.loader-mark:before{
+  content:"";
+  position:absolute;
+  width:92px;
+  height:2px;
+  left:50%;
+  bottom:9px;
+  transform:translateX(-50%);
+  border-radius:999px;
+  background:linear-gradient(90deg,transparent,#ef4b42,transparent);
+  box-shadow:0 0 22px rgba(239,75,66,.45);
+  animation:loaderLine 1.7s ease-in-out infinite;
+}
+.loader-mark:after{
+  content:"";
+  position:absolute;
+  width:118px;
+  height:118px;
+  border-radius:50%;
+  background:rgba(255,255,255,.055);
+  filter:blur(18px);
+  animation:loaderGlow 2s ease-in-out infinite;
+}
+.loader-mark img{
+  z-index:2;
+  width:132px;
+  max-height:160px;
+  object-fit:contain;
+  animation:loaderReveal 1.35s cubic-bezier(.2,.75,.25,1) both;
+  filter:drop-shadow(0 22px 28px rgba(0,0,0,.32));
+}
+.loader-mark span{
+  display:none;
+}
+.page-loader p{
+  position:relative;
+  margin:24px 0 7px;
+  font:800 28px/1 Manrope,sans-serif;
+  letter-spacing:.24em;
+  text-indent:.24em;
+  animation:loaderText .9s .18s ease both;
+}
+.page-loader small{
+  position:relative;
+  color:rgba(255,255,255,.58);
+  font-size:11px;
+  font-weight:700;
+  letter-spacing:.22em;
+  text-indent:.22em;
+  text-transform:uppercase;
+  animation:loaderText .9s .32s ease both;
+}
+@keyframes loaderReveal{
+  0%{opacity:0;transform:translateY(18px) scale(.88);filter:blur(5px) drop-shadow(0 0 0 transparent)}
+  55%{opacity:1}
+  100%{opacity:1;transform:none;filter:blur(0) drop-shadow(0 22px 28px rgba(0,0,0,.32))}
+}
+@keyframes loaderText{
+  from{opacity:0;transform:translateY(9px)}
+  to{opacity:1;transform:none}
+}
+@keyframes loaderLine{
+  0%,100%{width:48px;opacity:.45}
+  50%{width:118px;opacity:1}
+}
+@keyframes loaderGlow{
+  0%,100%{transform:scale(.92);opacity:.45}
+  50%{transform:scale(1.12);opacity:.8}
+}
+@media(max-width:600px){
+  .page-loader .loader-mark{transform:none;width:150px;height:165px}
+  .loader-mark img{width:112px}
+  .page-loader p{font-size:24px}
+}
+@media(prefers-reduced-motion:reduce){
+  .loader-mark img,.loader-mark:before,.loader-mark:after,.page-loader p,.page-loader small{animation:none!important}
+}
