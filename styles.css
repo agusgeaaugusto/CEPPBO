@@ -387,3 +387,13 @@ body{overflow-x:hidden}.scroll-progress{position:fixed;z-index:3000;left:0;top:0
 }
 @keyframes ceppboLogoFloat{0%,100%{transform:translateY(0)}50%{transform:translateY(-8px)}}
 @keyframes ceppboLogoPulse{0%,100%{opacity:.5;transform:translate(-50%,-68%) scale(.94)}50%{opacity:1;transform:translate(-50%,-68%) scale(1.08)}}
+
+/* Estabilizacion visual CEPPBO */
+img{max-width:100%;height:auto}
+.hero-logo{overflow:hidden}
+.hero-logo>img{display:block;object-fit:contain!important}
+.page-loader{overflow:hidden}
+.loader-brand>img{display:block;object-fit:contain!important;max-width:125px!important}
+.drive-image{overflow:hidden}
+.drive-image>img{display:block;width:100%;height:100%;max-width:100%;object-fit:cover}
+.poster-grid .drive-image>img{object-fit:contain}
