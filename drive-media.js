@@ -1,5 +1,5 @@
 (() => {
-  const sections=["avisos","posters","actividades","eventos","horarios","grados_cursos","docentes"];
+  const sections=["avisos","posters","actividades","eventos","horarios","grados_cursos","docentes","directivos","equipo_administrativo","colaboradores","jardin","preescolar","primer_grado","segundo_grado","tercer_grado","cuarto_grado","quinto_grado","sexto_grado","septimo_grado","octavo_grado","noveno_grado","primer_curso","segundo_curso","tercer_curso"];
   const CACHE_KEY="ceppbo-drive-media-v4";
   const LOCAL_LOGO="assets/ceppbo-logo.png";
   const pretty=s=>({avisos:"Avisos",posters:"Pósteres",actividades:"Actividades",eventos:"Eventos",horarios:"Horarios",grados_cursos:"Grados y cursos",docentes:"Docentes"}[s]||s);
