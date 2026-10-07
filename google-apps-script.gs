@@ -25,7 +25,24 @@ const FOLDERS = {
   horarios: '06_HORARIOS',
   grados_cursos: '07_GRADOS_Y_CURSOS',
   docentes: '08_DOCENTES',
-  fondo_portada: '09_FONDO_PORTADA'
+  fondo_portada: '09_FONDO_PORTADA',
+  directivos: '10_EQUIPO_INSTITUCIONAL/01_DIRECTIVOS',
+  equipo_administrativo: '10_EQUIPO_INSTITUCIONAL/02_EQUIPO_ADMINISTRATIVO',
+  colaboradores: '10_EQUIPO_INSTITUCIONAL/03_COLABORADORES',
+  jardin: '11_GRADOS_Y_CURSOS/01_JARDIN',
+  preescolar: '11_GRADOS_Y_CURSOS/02_PREESCOLAR',
+  primer_grado: '11_GRADOS_Y_CURSOS/03_PRIMER_GRADO',
+  segundo_grado: '11_GRADOS_Y_CURSOS/04_SEGUNDO_GRADO',
+  tercer_grado: '11_GRADOS_Y_CURSOS/05_TERCER_GRADO',
+  cuarto_grado: '11_GRADOS_Y_CURSOS/06_CUARTO_GRADO',
+  quinto_grado: '11_GRADOS_Y_CURSOS/07_QUINTO_GRADO',
+  sexto_grado: '11_GRADOS_Y_CURSOS/08_SEXTO_GRADO',
+  septimo_grado: '11_GRADOS_Y_CURSOS/09_SEPTIMO_GRADO',
+  octavo_grado: '11_GRADOS_Y_CURSOS/10_OCTAVO_GRADO',
+  noveno_grado: '11_GRADOS_Y_CURSOS/11_NOVENO_GRADO',
+  primer_curso: '11_GRADOS_Y_CURSOS/12_PRIMER_CURSO',
+  segundo_curso: '11_GRADOS_Y_CURSOS/13_SEGUNDO_CURSO',
+  tercer_curso: '11_GRADOS_Y_CURSOS/14_TERCER_CURSO'
 };
 
 function doGet() {
@@ -37,9 +54,14 @@ function doGet() {
 }
 
 function readFolder_(root, folderName) {
-  const folders = root.getFoldersByName(folderName);
-  if (!folders.hasNext()) return [];
-  const files = folders.next().getFiles();
+  const parts = String(folderName).split('/');
+  let folder = root;
+  for (const part of parts) {
+    const folders = folder.getFoldersByName(part);
+    if (!folders.hasNext()) return [];
+    folder = folders.next();
+  }
+  const files = folder.getFiles();
   const out = [];
   while (files.hasNext()) {
     const f = files.next();
