@@ -273,3 +273,11 @@ html{scroll-padding-top:110px}body{font-family:Inter,Arial,sans-serif!important}
  transform:translateY(-3px)!important;
  box-shadow:0 14px 30px rgba(60,65,70,.22),0 3px 8px rgba(60,65,70,.10)!important;
 }
+
+/* Visor de imágenes sobre cualquier sección, incluso con estilos heredados */
+#galleryLightbox:not([hidden]){display:flex!important;position:fixed!important;inset:0!important;z-index:999999!important;align-items:center!important;justify-content:center!important;flex-direction:column!important;gap:12px!important;padding:55px 18px 24px!important;background:rgba(16,17,20,.90)!important;box-sizing:border-box!important}
+#galleryLightbox[hidden]{display:none!important}
+#galleryLightbox img{display:block!important;width:auto!important;height:auto!important;max-width:95vw!important;max-height:78vh!important;object-fit:contain!important;border:0!important;box-shadow:none!important}
+#galleryLightbox p{color:white!important;text-align:center!important;max-width:90vw!important;margin:0!important}
+#lightboxClose{position:absolute!important;top:12px!important;right:16px!important;z-index:2!important;color:white!important;background:rgba(255,255,255,.18)!important;border:1px solid rgba(255,255,255,.4)!important;border-radius:50%!important;width:42px!important;height:42px!important;font-size:30px!important;cursor:pointer!important}
+.drive-card .drive-image{cursor:zoom-in!important}
