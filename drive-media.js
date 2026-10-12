@@ -39,10 +39,10 @@
     box.innerHTML=items.map((item,index)=>`
       <article class="drive-card reveal visible">
         <div class="drive-image">
-          <img data-drive-index="${index}" loading="${index<2?"eager":"lazy"}" ${index===0?'fetchpriority="high"':""} decoding="async" alt="${esc(item.name||pretty(section))}">
+          <img data-drive-index="${index}" loading="lazy" decoding="async" width="640" height="480" alt="${esc(item.name||pretty(section))}">
         </div>
         <div class="drive-caption">
-          ${item.modifiedTime?`<small>Actualizado: ${new Date(item.modifiedTime).toLocaleDateString("es-PY")}</small>`:""}
+          ${item.modifiedTime?`<small>${new Date(item.modifiedTime).toLocaleDateString("es-PY")}</small>`:""}
         </div>
       </article>`).join("");
     box.querySelectorAll("img[data-drive-index]").forEach(img=>setImageWithFallback(img,items[Number(img.dataset.driveIndex)]));
@@ -113,7 +113,7 @@
     });
     readCache();
     load();
-    setInterval(load,window.CEPPBO_MEDIA_REFRESH_MS||15000);
+    setInterval(load,Math.max(window.CEPPBO_MEDIA_REFRESH_MS||300000,300000));
     document.addEventListener("visibilitychange",()=>{if(!document.hidden) load();});
   });
 })();
