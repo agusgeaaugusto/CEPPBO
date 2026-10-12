@@ -130,3 +130,26 @@ h1,h2,h3{font-family:Lora,Georgia,serif!important;letter-spacing:-.025em}
 footer a:hover{text-decoration:underline}
 @media(max-width:900px){.hero{min-height:530px!important}.hero-inner{padding:95px 0 75px!important}.drive-band{display:block!important}.drive-band-copy{max-width:none;margin-bottom:25px}.media-grid,.teacher-grid,.landscape-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 @media(max-width:520px){.header-inner{gap:8px!important}.brand span{min-width:0!important}.brand strong{font-size:15px!important}.brand small,.brand em{font-size:8px!important}.hero h1{font-size:clamp(2.6rem,11vw,4rem)!important}.hero-actions .button{width:100%}.hero-tags{justify-content:center}.media-grid,.teacher-grid,.landscape-grid{grid-template-columns:1fr!important}.drive-card{max-width:440px!important;margin:auto!important}.community-block,.grade-block{padding:15px!important}.experience-inner{padding:36px 22px!important}}
+
+/* Paleta exclusiva CEPPBO: bordó, rojo, blanco y dorado */
+:root{--violet:#7A1F2B;--violet2:#5A1620;--violet-dark:#5A1620;--purple:#7A1F2B;--purple-dark:#5A1620;--blue:#7A1F2B;--primary:#7A1F2B;--accent:#C9A24B;--red:#A52D38;--red2:#7A1F2B}
+.hero,.values,.drive-violet{background:#5A1620!important;background-image:linear-gradient(125deg,#5A1620,#7A1F2B)!important}
+.hero-orbit,.orbit-one,.orbit-two,.shape-a,.shape-b{display:none!important}
+.experience-inner,.intro,.levels,.community-directory,.grade-directory,.drive-soft,.pastoral{background:#fff!important}
+.levels{background:#F8F5F3!important}
+.values-strip article{background:#fff!important}
+.feature-card,.mv-card,.level-card,.drive-card{background:#fff!important}
+.feature-card i,.mv-icon,.level-icon,.location-icon{color:#7A1F2B!important}
+.hero-tags span{background:#ffffff1c!important;color:#fff!important}
+.eyebrow{color:#7A1F2B!important}
+.hero .eyebrow,.values .eyebrow,.enrollment .eyebrow{color:#F1D79C!important}
+.experience-inner h2 span{color:#7A1F2B!important}
+.nav a:hover,.footer-inner a:hover{color:#A52D38!important}
+.site-header,.header-inner{background:#fff!important}
+footer,.enrollment{background:#5A1620!important}
+.fa-solid,.fa-regular{font-style:normal}
+.icon-illustration{display:inline-flex;align-items:center;justify-content:center;width:58px;height:58px;background:#F7E9E9;border:1px solid #E7CED1;border-radius:16px;color:#7A1F2B}
+.icon-illustration svg{width:30px;height:30px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.values-strip .icon-illustration{margin:auto}
+.values-strip .icon-illustration svg{width:32px;height:32px}
+.feature-card .icon-illustration,.level-icon .icon-illustration{margin:0 0 14px}
