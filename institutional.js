@@ -23,6 +23,16 @@ document.addEventListener('keydown',event=>{if(!lightbox?.hidden&&event.key==='E
 // Formulario sin servidor: el visitante decide enviar desde WhatsApp.
 document.getElementById('contactForm')?.addEventListener('submit',event=>{
  event.preventDefault();const form=event.currentTarget;if(!form.reportValidity())return;
- const data=new FormData(form);const message='Consulta CEPPBO%0A'+encodeURIComponent('Nombre: '+data.get('nombre')+'\nMotivo: '+data.get('motivo')+'\nMensaje: '+data.get('mensaje'));
+ const data=new FormData(form);const message=encodeURIComponent('Consulta CEPPBO\nNombre: '+data.get('nombre')+'\nMotivo: '+data.get('motivo')+'\nMensaje: '+data.get('mensaje'));
  window.open('https://wa.me/595982119598?text='+message,'_blank','noopener,noreferrer');
+});
+
+document.querySelectorAll('#drive-actividades,#drive-eventos').forEach(grid=>{
+ grid.addEventListener('keydown',event=>{
+  if(event.key!=='Enter'&&event.key!==' ')return;
+  const target=event.target.closest('.drive-image');if(!target)return;
+  event.preventDefault();target.querySelector('img')?.click();
+ });
+ const observer=new MutationObserver(()=>grid.querySelectorAll('.drive-image').forEach(el=>{el.tabIndex=0;el.setAttribute('role','button');el.setAttribute('aria-label','Ampliar fotografía');}));
+ observer.observe(grid,{childList:true,subtree:true});
 });
