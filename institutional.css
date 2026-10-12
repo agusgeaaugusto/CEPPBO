@@ -153,3 +153,21 @@ footer,.enrollment{background:#5A1620!important}
 .values-strip .icon-illustration{margin:auto}
 .values-strip .icon-illustration svg{width:32px;height:32px}
 .feature-card .icon-illustration,.level-icon .icon-illustration{margin:0 0 14px}
+
+/* Correcciones auditadas del ZIP original: identidad y galerías */
+:root{--violet:#741e2d;--violet2:#4b111e;--red:#a72c39;--red2:#741e2d;--soft:#f7f4f1;--line:#e7ddd9;--ink:#252024}
+html{scroll-padding-top:110px}body{font-family:Inter,Arial,sans-serif!important}
+.hero{background:#4b111e!important;background-image:linear-gradient(115deg,#4b111ee8,#741e2dd1)!important}.hero.has-cover{background-image:linear-gradient(100deg,rgba(54,11,25,.87),rgba(89,18,35,.72)),var(--ceppbo-cover)!important;background-size:cover!important;background-position:center!important}
+.hero h1 span{color:#f2d7a0!important}.hero .hero-kicker{color:#f6d8ac!important}
+.levels,.mv,.intro,.community-directory,.grade-directory,.pastoral{background:#f7f4f1!important}
+.drive-showcase{background:#fff!important}.drive-band,.drive-band.drive-violet,.drive-band.drive-soft{background:#fff!important;color:#252024!important}.drive-band:nth-child(even){background:#f7f4f1!important}.drive-band-copy h2,.drive-band.drive-violet h2{color:#4b111e!important}.drive-band-copy p{color:#61575a!important}.drive-band{border-bottom:1px solid #e7ddd9!important}.drive-band-copy{position:relative!important;top:auto!important}
+.media-grid{display:grid!important;grid-template-columns:repeat(auto-fit,minmax(min(100%,210px),1fr))!important;gap:18px!important;align-items:start!important}
+.drive-card{width:100%!important;min-width:0!important;max-width:none!important;border:1px solid #e7ddd9!important;border-radius:16px!important;background:#fff!important;box-shadow:0 5px 22px #4b111e0c!important;overflow:hidden!important}
+.drive-card .drive-image,.drive-image,.poster-grid .drive-card .drive-image,.teacher-grid .drive-card .drive-image{display:flex!important;align-items:center!important;justify-content:center!important;aspect-ratio:4/3!important;width:100%!important;height:auto!important;overflow:hidden!important;background:#f7f4f1!important;padding:10px!important}
+.poster-grid .drive-card .drive-image{aspect-ratio:3/4!important}.teacher-grid .drive-card .drive-image{aspect-ratio:1/1!important}
+.drive-card .drive-image img,.drive-card img,.poster-grid .drive-card img,.teacher-grid .drive-card img,.landscape-grid .drive-card img{width:100%!important;height:100%!important;max-width:100%!important;max-height:100%!important;object-fit:contain!important;object-position:center!important;border-radius:6px!important;display:block!important}
+.drive-card.image-error .drive-image:after{content:'Imagen no disponible';font-size:13px;color:#745e62}.drive-card.image-error img{display:none!important}
+.gallery-filters button{border-color:#741e2d!important;color:#741e2d!important}.gallery-filters button.active,.gallery-filters button:hover{background:#741e2d!important;color:white!important}.gallery-hidden{display:none!important}
+.contact-visual,.enrollment,footer{background:#4b111e!important;color:white!important}.floating-instagram{background:#741e2d!important}
+@media(max-width:900px){.drive-band{display:block!important}.drive-band-copy{margin-bottom:24px!important}.media-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
+@media(max-width:560px){.media-grid{grid-template-columns:1fr!important}.drive-card{max-width:430px!important;margin:0 auto!important}}
