@@ -171,3 +171,19 @@ html{scroll-padding-top:110px}body{font-family:Inter,Arial,sans-serif!important}
 .contact-visual,.enrollment,footer{background:#4b111e!important;color:white!important}.floating-instagram{background:#741e2d!important}
 @media(max-width:900px){.drive-band{display:block!important}.drive-band-copy{margin-bottom:24px!important}.media-grid{grid-template-columns:repeat(2,minmax(0,1fr))!important}}
 @media(max-width:560px){.media-grid{grid-template-columns:1fr!important}.drive-card{max-width:430px!important;margin:0 auto!important}}
+
+/* Hero 2026: iconos editoriales equilibrados en móvil y escritorio */
+.hero .hero-tags{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px!important;width:min(720px,100%);margin:32px auto 0!important;align-items:stretch}
+.hero .hero-tags .hero-pill{display:flex!important;align-items:center!important;justify-content:flex-start!important;gap:12px!important;min-width:0;padding:14px 16px!important;border:1px solid rgba(255,255,255,.22)!important;border-radius:16px!important;background:rgba(255,255,255,.075)!important;color:#fff!important;text-align:left!important;box-shadow:none!important;backdrop-filter:blur(8px)}
+.hero-pill-icon{width:42px;height:42px;min-width:42px;display:grid;place-items:center;border-radius:12px;background:#fff!important;color:#741e2d!important}
+.hero-pill-icon svg{width:23px;height:23px;display:block;stroke:#741e2d}
+.hero-pill-text{display:flex;flex-direction:column;min-width:0;gap:3px}
+.hero-pill-text strong{font-family:Inter,Arial,sans-serif!important;font-size:14px!important;line-height:1.15;font-weight:750;color:#fff!important;letter-spacing:0}
+.hero-pill-text small{font-size:11px!important;line-height:1.35;color:#f1d9d7!important;font-weight:500}
+.hero .hero-tags .hero-pill i{display:none!important}
+.hero .hero-kicker{letter-spacing:.045em!important;font-size:clamp(13px,1.6vw,17px)!important}
+.hero h1{font-size:clamp(3.1rem,6.4vw,5.5rem)!important;text-wrap:balance}
+.hero-actions{gap:12px!important}
+.hero-actions .button{min-height:49px}
+@media(max-width:700px){.hero .hero-tags{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px!important}.hero .hero-tags .hero-pill{flex-direction:column;align-items:center!important;justify-content:center!important;text-align:center!important;padding:12px 7px!important;gap:8px!important}.hero-pill-icon{width:42px;height:42px;min-width:42px}.hero-pill-text strong{font-size:12px!important}.hero-pill-text small{font-size:10px!important}.hero .hero-inner{padding-top:80px!important;padding-bottom:70px!important}.hero h1{font-size:clamp(2.7rem,8.7vw,4.6rem)!important}}
+@media(max-width:380px){.hero .hero-tags{gap:5px!important}.hero .hero-tags .hero-pill{padding:10px 4px!important}.hero-pill-text small{font-size:9px!important}}
