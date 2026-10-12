@@ -207,3 +207,25 @@ html{scroll-padding-top:110px}body{font-family:Inter,Arial,sans-serif!important}
 .hero .hero-tags .hero-pill-text strong{font-size:13px!important;color:#fff!important}
 .hero .hero-tags .hero-pill-text small{font-size:10px!important;color:#f1d9d7!important}
 @media(max-width:700px){.hero .hero-tags{display:grid!important;grid-template-columns:repeat(3,minmax(0,1fr))!important;gap:7px!important}.hero .hero-tags .hero-pill{display:flex!important;flex-direction:column!important;gap:5px!important;padding:0!important;min-height:0!important}.hero .hero-tags .hero-pill-text{align-items:center!important;text-align:center!important}.hero .hero-tags .hero-pill-text strong,.hero .hero-tags .hero-pill-text small{text-align:center!important}.hero .hero-tags .hero-pill-icon{width:32px!important;height:32px!important;min-width:32px!important;min-height:32px!important;max-width:32px!important;max-height:32px!important;flex:0 0 32px!important}.hero .hero-tags .hero-pill-icon svg{width:25px!important;height:25px!important}}
+
+/* Imágenes flotantes: todos los contenedores de medios transparentes */
+.media-grid,.drive-band-media,.drive-card,.drive-image,.drive-card .drive-image,
+.poster-grid .drive-card,.poster-grid .drive-image,
+.landscape-grid .drive-card,.landscape-grid .drive-image,
+.teacher-grid .drive-card,.teacher-grid .drive-image,
+.grade-block .drive-card,.community-block .drive-card,
+.contact-visual img,.footer-brand img,.brand img,.hero-logo img{
+ background:transparent!important;background-color:transparent!important;
+ box-shadow:none!important;
+}
+.drive-card,.poster-grid .drive-card,.landscape-grid .drive-card,.teacher-grid .drive-card{
+ border:0!important;border-radius:0!important;overflow:visible!important;
+}
+.drive-image,.drive-card .drive-image,.poster-grid .drive-card .drive-image,
+.landscape-grid .drive-card .drive-image,.teacher-grid .drive-card .drive-image{
+ border:0!important;border-radius:0!important;padding:0!important;
+}
+.drive-card img,.drive-image img,.poster-grid img,.landscape-grid img,.teacher-grid img{
+ background:transparent!important;box-shadow:none!important;object-fit:contain!important;
+}
+.drive-card:hover{box-shadow:none!important}
