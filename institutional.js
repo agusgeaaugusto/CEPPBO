@@ -7,7 +7,7 @@ document.querySelectorAll('img').forEach(img=>{if(!img.closest('.brand,.hero'))i
 document.querySelectorAll('[data-gallery-filter]').forEach(button=>button.addEventListener('click',()=>{
  const selected=button.dataset.galleryFilter;
  document.querySelectorAll('[data-gallery-filter]').forEach(b=>{const active=b===button;b.classList.toggle('active',active);b.setAttribute('aria-pressed',String(active));});
- ['actividades','eventos'].forEach(type=>{const section=document.getElementById(type);if(section)section.classList.toggle('gallery-hidden',selected!=='all'&&selected!==type);});
+ ['actividades','eventos'].forEach(type=>{const grid=document.getElementById('drive-'+type);const section=grid?.closest('.drive-band');if(section)section.classList.toggle('gallery-hidden',selected!=='all'&&selected!==type);});
 }));
 // Lightbox accesible con cierre por Escape y retorno del foco.
 const lightbox=document.getElementById('galleryLightbox'),closeLightbox=document.getElementById('lightboxClose');
@@ -35,4 +35,10 @@ document.querySelectorAll('#drive-actividades,#drive-eventos').forEach(grid=>{
  });
  const observer=new MutationObserver(()=>grid.querySelectorAll('.drive-image').forEach(el=>{el.tabIndex=0;el.setAttribute('role','button');el.setAttribute('aria-label','Ampliar fotografía');}));
  observer.observe(grid,{childList:true,subtree:true});
+});
+
+// Navegación de imágenes con teclado y trampa de foco sencilla.
+document.addEventListener('keydown',event=>{
+ if(lightbox?.hidden||!lightbox)return;
+ if(event.key==='Tab'){event.preventDefault();closeLightbox?.focus();}
 });
