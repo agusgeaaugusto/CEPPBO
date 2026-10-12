@@ -52,3 +52,33 @@ footer{background:var(--bordo-oscuro)!important}
 .gallery-lightbox button{position:absolute;top:15px;right:24px;color:white;background:transparent;border:0;font-size:40px;cursor:pointer}
 .drive-image{cursor:zoom-in}
 @media(max-width:680px){.values-strip-grid{grid-template-columns:1fr}.history-line{flex-direction:column}.gallery-filters button{flex:1 1 auto}.contact-form button{width:100%;justify-self:stretch}}
+
+/* Corrección de la herencia visual antigua: reemplazar violeta/rojo en todo el sitio */
+:root{--violet:#7A1F2B;--violet2:#5A1620;--red:#7A1F2B;--red2:#5A1620;--ink:#1A1A1A;--muted:#55504f;--soft:#F5F2F0;--line:#e8deda;--white:#fff;--shadow:0 14px 36px rgba(60,20,29,.10)}
+.site-header{background:transparent!important}
+.header-inner{border-color:#e8deda!important}
+.hero{background:linear-gradient(105deg,rgba(40,9,17,.92),rgba(90,22,32,.83)),linear-gradient(125deg,#5A1620,#7A1F2B)!important;padding-top:80px}
+.hero::after{opacity:.12}
+.hero-shape,.logo-halo{display:none!important}
+.hero-inner{grid-template-columns:minmax(0,1fr)!important;max-width:930px;gap:0!important;text-align:center;padding:110px 0 95px!important}
+.hero h1{max-width:none!important;font-size:clamp(3rem,7vw,5.8rem)!important;line-height:1.1!important}
+.hero-lead{margin-left:auto;margin-right:auto}
+.hero-actions,.hero-tags{justify-content:center}
+.hero-logo{display:none!important}
+.hero .hero-tags i{color:#f1d6a1!important}
+.quick-info{border-color:var(--line)}
+.quick-info i{color:var(--bordo)!important;background:#f5e8e9!important}
+.levels{background:var(--gris-calido)!important;color:var(--negro)!important}
+.levels-copy h2,.levels-copy>p:not(.eyebrow){color:var(--negro)!important}
+.level-card{border:1px solid var(--line)}
+.mv,.intro,.contact,.location{background:#fff!important}
+.mv-card.vision,.mv-card.mission{border-top-color:var(--bordo)!important}
+.values{background:var(--bordo-oscuro)!important}
+.drive-band,.drive-band:nth-child(even){background:#fff!important}
+.drive-band:nth-child(odd){background:var(--gris-calido)!important}
+.drive-band h2,.drive-band h3{color:var(--negro)}
+.grade-directory,.community-directory{background:var(--gris-calido)!important}
+.feature-card>i,.level-icon{background:#f6e7e9!important;color:var(--bordo)!important}
+.feature-card>span{color:#c9a24b!important}
+.floating-whatsapp{background:#167e53!important}
+@media(max-width:900px){.hero{padding-top:65px}.hero-inner{padding:85px 0 70px!important}.hero h1{font-size:clamp(2.6rem,10vw,4.5rem)!important}.nav{background:#fff!important}}
