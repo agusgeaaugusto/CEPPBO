@@ -1,0 +1,31 @@
+/* Identidad institucional CEPPBO */
+:root{--bordo:#7A1F2B;--bordo-oscuro:#5A1620;--blanco:#fff;--negro:#1A1A1A;--gris-calido:#F5F2F0;--dorado:#C9A24B}
+html{scroll-behavior:smooth;scroll-padding-top:90px}
+body{font-family:Inter,'DM Sans',Arial,sans-serif;color:var(--negro);font-size:16px;background:#fff}
+h1,h2,h3{font-family:Lora,Georgia,serif}
+:focus-visible{outline:3px solid var(--dorado);outline-offset:3px}
+.site-header{background:#fff!important;box-shadow:0 4px 20px #2c10101a}
+.brand strong,.brand em{color:var(--bordo)!important}
+.nav .button.primary,.button.primary{background:var(--bordo)!important;color:white!important;border-color:var(--bordo)!important}
+.button.primary:hover{background:var(--bordo-oscuro)!important}
+.hero{background-color:var(--bordo-oscuro)!important;background-image:linear-gradient(90deg,#320d17e8,#5a1620bb)!important;min-height:570px}
+.hero h1,.hero h1 span,.hero .hero-kicker,.hero .hero-lead,.hero .eyebrow{color:#fff!important}
+.hero .ghost{border:1px solid #fff!important;color:#fff!important;background:transparent!important}
+.hero-tags span{background:#ffffff24!important;color:#fff!important}
+.experience,.values,.levels,.drive-violet{background:var(--bordo-oscuro)!important}
+.drive-soft,.community-directory,.grade-directory,.pastoral{background:var(--gris-calido)!important}
+.eyebrow,.feature-card i{color:var(--bordo)!important}
+.eyebrow.light{color:#f1d6a1!important}
+.feature-card,.mv-card,.level-card,.drive-card,.grade-block,.community-block{border-radius:14px!important;box-shadow:0 5px 20px #2c141412!important}
+.enrollment{padding:80px 22px;text-align:center;background:var(--bordo);color:white}
+.enrollment>div{max-width:760px;margin:auto}
+.enrollment h2{color:white;font-size:clamp(2rem,5vw,3.2rem);margin:14px 0}
+.enrollment p{color:white;line-height:1.75}
+.enrollment .button.white{display:inline-block;background:#fff;color:var(--bordo)!important;border-radius:10px;padding:14px 22px;margin-top:20px}
+.pastoral{padding:70px 22px}
+footer{background:var(--bordo-oscuro)!important}
+.teacher-grid .drive-image{aspect-ratio:1!important}
+.drive-caption small{display:none!important}
+.floating-instagram{display:none!important}
+@media(max-width:900px){.nav{background:white!important}.nav a{color:var(--negro)!important}.nav .button.primary{color:white!important}.hero-logo{display:none}.hero-inner{padding:90px 20px 70px}.hero h1{font-size:clamp(2.5rem,9vw,4.8rem)}}
+@media(prefers-reduced-motion:reduce){*,*::before,*::after{scroll-behavior:auto!important;animation-duration:.01ms!important;transition-duration:.01ms!important}.reveal{opacity:1!important;transform:none!important}}
