@@ -1,6 +1,6 @@
 (() => {
   const sections=["avisos","posters","actividades","eventos","horarios","grados_cursos","docentes","directivos","equipo_administrativo","colaboradores","jardin","preescolar","primer_grado","segundo_grado","tercer_grado","cuarto_grado","quinto_grado","sexto_grado","septimo_grado","octavo_grado","noveno_grado","primer_curso","segundo_curso","tercer_curso"];
-  const CACHE_KEY="ceppbo-drive-media-v4";
+  const CACHE_KEY="ceppbo-drive-media-v5";
   const LOCAL_LOGO="assets/ceppbo-logo.png";
   const pretty=s=>({avisos:"Avisos",posters:"Pósteres",actividades:"Actividades",eventos:"Eventos",horarios:"Horarios",grados_cursos:"Grados y cursos",docentes:"Docentes"}[s]||s);
   const esc=s=>String(s||"").replace(/[&<>'"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;","'":"&#39;",'"':"&quot;"}[c]));
@@ -73,7 +73,7 @@
     let pos=0, urls=candidates(items[0]);
     probe.onload=()=>{
       const good=probe.src;
-      hero.style.backgroundImage=`linear-gradient(90deg,rgba(50,13,23,.88),rgba(90,22,32,.68)),url("${good}")`;
+      hero.style.setProperty("--ceppbo-cover",`url("${good}")`);hero.classList.add("has-cover");
       hero.style.backgroundSize="cover";
       hero.style.backgroundPosition="center";
       hero.style.backgroundRepeat="no-repeat";
@@ -113,7 +113,7 @@
     });
     readCache();
     load();
-    setInterval(load,Math.max(window.CEPPBO_MEDIA_REFRESH_MS||300000,300000));
+    setInterval(load,Math.max(window.CEPPBO_MEDIA_REFRESH_MS||900000,900000));
     document.addEventListener("visibilitychange",()=>{if(!document.hidden) load();});
   });
 })();
