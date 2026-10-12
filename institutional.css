@@ -259,3 +259,17 @@ html{scroll-padding-top:110px}body{font-family:Inter,Arial,sans-serif!important}
  border:0!important;font-size:12px!important}
 .drive-card .drive-caption:empty{display:none!important}
 @media(max-width:560px){.drive-card,.poster-grid .drive-card,.teacher-grid .drive-card{max-width:100%!important}.drive-card img{max-height:520px!important}}
+
+/* Marco flotante gris ahumado: sustituye el borde bordó */
+.drive-card,.poster-grid .drive-card,.teacher-grid .drive-card,.landscape-grid .drive-card,
+.grade-block .drive-card,.community-block .drive-card{
+ border:1px solid rgba(100,105,110,.38)!important;
+ border-radius:12px!important;
+ background:transparent!important;
+ box-shadow:0 8px 22px rgba(60,65,70,.16),0 2px 6px rgba(60,65,70,.08)!important;
+ transition:transform .2s ease,box-shadow .2s ease!important;
+}
+.drive-card:hover,.poster-grid .drive-card:hover,.teacher-grid .drive-card:hover,.landscape-grid .drive-card:hover{
+ transform:translateY(-3px)!important;
+ box-shadow:0 14px 30px rgba(60,65,70,.22),0 3px 8px rgba(60,65,70,.10)!important;
+}
