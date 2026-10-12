@@ -8,7 +8,7 @@ h1,h2,h3{font-family:Lora,Georgia,serif}
 .brand strong,.brand em{color:var(--bordo)!important}
 .nav .button.primary,.button.primary{background:var(--bordo)!important;color:white!important;border-color:var(--bordo)!important}
 .button.primary:hover{background:var(--bordo-oscuro)!important}
-.hero{background-color:var(--bordo-oscuro)!important;background-image:linear-gradient(90deg,#320d17e8,#5a1620bb)!important;min-height:570px}
+.hero{background-color:var(--bordo-oscuro)!important;min-height:570px}
 .hero h1,.hero h1 span,.hero .hero-kicker,.hero .hero-lead,.hero .eyebrow{color:#fff!important}
 .hero .ghost{border:1px solid #fff!important;color:#fff!important;background:transparent!important}
 .hero-tags span{background:#ffffff24!important;color:#fff!important}
