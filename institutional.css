@@ -229,3 +229,33 @@ html{scroll-padding-top:110px}body{font-family:Inter,Arial,sans-serif!important}
  background:transparent!important;box-shadow:none!important;object-fit:contain!important;
 }
 .drive-card:hover{box-shadow:none!important}
+
+/* Marcos ajustados a la proporción real de cada imagen; borde fino de 1 mm */
+.media-grid{justify-items:center!important;align-items:start!important}
+.drive-card,.poster-grid .drive-card,.teacher-grid .drive-card,.landscape-grid .drive-card,
+.grade-block .drive-card,.community-block .drive-card{
+ display:inline-flex!important;flex-direction:column!important;
+ width:fit-content!important;max-width:100%!important;height:auto!important;
+ border:1mm solid #7A1F2B!important;border-radius:10px!important;
+ overflow:hidden!important;background:transparent!important;
+ box-shadow:none!important;padding:0!important;margin:0 auto!important;
+}
+.drive-card .drive-image,.drive-image,.poster-grid .drive-card .drive-image,
+.teacher-grid .drive-card .drive-image,.landscape-grid .drive-card .drive-image{
+ display:block!important;width:auto!important;max-width:100%!important;
+ height:auto!important;min-height:0!important;aspect-ratio:auto!important;
+ padding:0!important;margin:0!important;overflow:visible!important;
+ background:transparent!important;
+}
+.drive-card .drive-image img,.drive-card img,.poster-grid .drive-card img,
+.teacher-grid .drive-card img,.landscape-grid .drive-card img{
+ display:block!important;width:auto!important;height:auto!important;
+ max-width:100%!important;max-height:460px!important;
+ aspect-ratio:auto!important;object-fit:contain!important;
+ border-radius:0!important;margin:0 auto!important;
+}
+.drive-card .drive-caption{width:100%!important;padding:7px 10px!important;
+ text-align:center!important;background:transparent!important;
+ border:0!important;font-size:12px!important}
+.drive-card .drive-caption:empty{display:none!important}
+@media(max-width:560px){.drive-card,.poster-grid .drive-card,.teacher-grid .drive-card{max-width:100%!important}.drive-card img{max-height:520px!important}}
