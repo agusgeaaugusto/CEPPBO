@@ -73,7 +73,7 @@
     let pos=0, urls=candidates(items[0]);
     probe.onload=()=>{
       const good=probe.src;
-      hero.style.backgroundImage=`linear-gradient(90deg,rgba(35,20,105,.88),rgba(57,37,143,.68)),url("${good}")`;
+      hero.style.backgroundImage=`linear-gradient(90deg,rgba(50,13,23,.88),rgba(90,22,32,.68)),url("${good}")`;
       hero.style.backgroundSize="cover";
       hero.style.backgroundPosition="center";
       hero.style.backgroundRepeat="no-repeat";
